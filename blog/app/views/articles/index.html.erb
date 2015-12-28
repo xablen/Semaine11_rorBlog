@@ -1,0 +1,12 @@
+<h1>Bienvenue sur notre Blog</h1>
+
+<div id="menu">
+	<h2>Les articles</h2>
+
+	<% @the_articles.each do |an_article|%>
+	<div class="title"><a href="/<%= an_article.id%>"><%= an_article.title %></a></div> 
+	<div class="titre">by <%= an_article.author %> - <%= an_article.nb_car %> characters</div> 
+	<%end%>
+	<br>
+	<%= paginate @the_articles %>
+</div>
